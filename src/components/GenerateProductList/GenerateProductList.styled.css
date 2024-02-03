@@ -1,0 +1,14 @@
+/* .container {
+  background-color: blueviolet;
+} */
+
+.container img {
+  width: 150px;
+}
+
+.container.notActive {
+  background-color: gray;
+}
+.container.active {
+  background-color: green;
+}
