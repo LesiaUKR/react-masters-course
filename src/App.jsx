@@ -1,18 +1,23 @@
-// import GenerateProductList2 from "./components/GenerateProductList2";
-import data from "./data.json";
-// import data2 from "./data.json";
-import GenerateProductList from "./components/GenerateProductList/GenerateProductList";
-import styles from "./App.module.css";
+import { NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import TaskManagerPage from "./pages/TaskManagerPage";
+import CounterPage from "./pages/CounterPage";
+import css from "./App.module.css";
 
 const App = () => {
   return (
-    <div className={styles.container}>
-      <GenerateProductList data={data} a="qwe" name="qwe" number={123}>
-        <div>це children для GenerateProductList</div>
-      </GenerateProductList>
-      {/* GenerateProductsList({data:data,a:'qwe',name:'qwe',number:123}) */}
-      {/* <GenerateProductList2 data={data2} /> */}
-    </div>
+    <>
+      <header>
+        <nav className={css.navList}>
+          <NavLink to="/counter">Counter</NavLink>
+          <NavLink to="/taskManager">Task manager</NavLink>
+        </nav>
+      </header>
+      <Routes>
+        <Route path="/counter" element={<CounterPage />} />
+        <Route path="/taskManager" element={<TaskManagerPage />} />
+      </Routes>
+    </>
   );
 };
 

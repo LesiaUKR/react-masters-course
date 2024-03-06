@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 // import data from "./data.json";
 // import data2 from "./data.json";
 import App from "./App";
-
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 // import "./index.css";
 
 // const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -103,4 +105,12 @@ const root = document.getElementById("root");
 // для цього огортаємо два компоненти в спільний батьківський елемент, а даному випадку в div
 // render потрібно вважати як return в функції, який повертає лише одне щось
 
-ReactDOM.createRoot(root).render(<App />);
+ReactDOM.createRoot(root).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
+);

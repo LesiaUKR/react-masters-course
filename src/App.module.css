@@ -1,7 +1,4 @@
-.container {
-  background-color: green;
-}
-
-#some {
-  width: 300px;
+.navList {
+  display: flex;
+  gap: 15px;
 }
