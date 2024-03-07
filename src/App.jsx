@@ -10,7 +10,7 @@ const App = () => {
       <header>
         <nav className={css.navList}>
           <NavLink to="/counter">Counter</NavLink>
-          <NavLink to="/taskManager">Task manager</NavLink>
+          <NavLink to="/taskManager">Task manager Redux</NavLink>
         </nav>
       </header>
       <Routes>

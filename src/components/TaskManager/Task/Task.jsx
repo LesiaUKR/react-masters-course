@@ -2,6 +2,7 @@ import { MdClose } from "react-icons/md";
 import css from "./Task.module.css";
 
 const Task = ({ task }) => {
+  console.log("task", task);
   return (
     <div className={css.wrapper}>
       <input
